@@ -14,9 +14,10 @@ export class HomepageComponent {
   opzioneSelezionata: any;
   statoTabella: boolean = true;
   checked: boolean = false;
+  iconaDettaglioSinistro: string = "pi-angle-down";
   sinistri: Sinistro[] = [
     {
-      "id": 1,
+      "id": 220185043,
       "nome": "La torre Livia",
       "uls": 33,
       "agenzia": "Urbino",
@@ -25,22 +26,22 @@ export class HomepageComponent {
       "contraente": "Mazzoli Silvano"
     },
     {
-      "id": 2,
+      "id": 220183775,
       "nome": "La torre Livia",
       "uls": 33,
       "agenzia": "Urbino",
       "gest": 28,
       "prod": 28,
-      "contraente": "Mazzoli Silvano"
+      "contraente": "Fucili Elisabetta"
     },
     {
-      "id": 3,
+      "id": 220179496,
       "nome": "La torre Livia",
       "uls": 33,
       "agenzia": "Urbino",
       "gest": 28,
       "prod": 28,
-      "contraente": "Mazzoli Silvano"
+      "contraente": "Giordani Gianfranco"
     }
   ];
 
@@ -54,6 +55,24 @@ export class HomepageComponent {
       {nome: 'Gestione card debitore', codice: '6'},
       {nome: 'Gestione', codice: '7'}
   ];
+  }
+
+
+  mostraDettagliSinistro(id: number){
+    if(document.getElementById('dettagliSinistro'+id)?.classList.contains("visibility")){
+      document.getElementById('dettagliSinistro'+id)?.classList.remove("flex");
+      document.getElementById('dettagliSinistro'+id)?.classList.add("removeVisibility");
+      document.getElementById('dettagliSinistro'+id)?.classList.remove("visibility");
+      document.getElementById('icona'+id)?.classList.remove("pi-angle-up");
+      document.getElementById('icona'+id)?.classList.add("pi-angle-down");
+  }
+  else{
+      document.getElementById('dettagliSinistro'+id)?.classList.add("visibility");
+      document.getElementById('dettagliSinistro'+id)?.classList.remove("removeVisibility");
+      document.getElementById('dettagliSinistro'+id)?.classList.add("flex");
+      document.getElementById('icona'+id)?.classList.remove("pi-angle-down");
+      document.getElementById('icona'+id)?.classList.add("pi-angle-up");
+  }
   }
 
 }

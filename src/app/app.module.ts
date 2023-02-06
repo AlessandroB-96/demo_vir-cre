@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenubarModule } from 'primeng/menubar';
 import { SplitterModule } from 'primeng/splitter';
 import { ListboxModule } from 'primeng/listbox';
@@ -15,6 +16,10 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule } from '@angular/forms';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { SidebarModule } from 'primeng/sidebar';
+import { PanelModule } from 'primeng/panel';
+import { MenuModule } from 'primeng/menu';
+import { AccordionModule } from 'primeng/accordion';
 
 
 @NgModule({
@@ -22,6 +27,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     AppComponent,
     HomepageComponent,
     TopbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,11 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     CheckboxModule,
     FormsModule,
     AvatarModule,
-    AvatarGroupModule
+    AvatarGroupModule,
+    SidebarModule,
+    PanelModule,
+    MenuModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

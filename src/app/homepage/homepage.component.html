@@ -1,51 +1,52 @@
 <p-splitter [style]="{'height': '78vh'}" [panelSizes]="[10,90]" [minSizes]="[10,90]" layout="horizontal">
-  <ng-template pTemplate>
-  <div class="card">
-    <p-listbox [options]="opzioniListaSinistra" optionLabel="nome" [style]="{'width':'15em'}">
-    </p-listbox>
-    <br>
-    <div>
-      <div>Ultimi sinistri lavorati <br>
-      RCA - 160137475 9 minuti fa <br>
-      BARBAGIOVANNI ROSARIO <br>
-      </div>
-      <br>
-      <div>Ultimi sinistri lavorati <br>
-        RCA - 160137475 9 minuti fa <br>
-        BARBAGIOVANNI ROSARIO <br>
-        </div>
-    </div>
-    <br>
-    <div>
-      <p-avatar icon="pi pi-user" styleClass="mr-2" size="xlarge"></p-avatar>
-      Testliq.456
-    </div>
-    <div class="card">
-      Liquidatore 339
-      <i class="pi pi-sign-out"></i>
-      <i class="pi pi-sort-alt" style="opacity: 50%;"></i>
-    </div>
-  </div>
-  </ng-template>
     
   <ng-template pTemplate >
-    <p-table [value]="sinistri" [resizableColumns]="true" selectionMode="single"
-      responsiveLayout="scroll" [scrollable]="true">
+    <p-table id="table" [value]="sinistri" [resizableColumns]="true" selectionMode="single"
+      responsiveLayout="scroll" [scrollable]="true" style="padding: 5px;" class="startingWidth">
+      
         <ng-template pTemplate="body" let-sinistro>
-          <p style="color: rgb(148, 0, 0);">Sinistro contestato rca</p>
+          <div style="background: rgb(213, 210, 210); border-radius: 5px;border-color: black; border-width: 10px; padding: 5px;">
+          <div class="flex gap-3" style="margin-left: 10px;width: 95%;">
+            <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+            <p style="color: rgb(148, 0, 0);"><b style="text-transform:uppercase;">Sinistro contestato rca</b></p>
+            <div class="flex align-items-center justify-content-end gap-3" style="margin-top: 15px;position: absolute;right: 0;">
+              <i class="pi pi-trash" style="color: rgb(148, 0, 0);"></i> 
+              <i class="pi pi-external-link" style="color: rgb(148, 0, 0);"></i>
+              <button (click)="mostraDettagliSinistro(sinistro.id)" pButton pRipple style="border: 0cm;color: rgb(148, 0, 0); margin-right: 10px;" class="p-button-outlined p-button-secondary">
+              <i id="icona{{sinistro.id}}" class="pi pi-angle-down"></i></button>
+            </div>
+          </div>
           <tr>
-            <td>
-              <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
-            </td>
-            <td>Sinistro: {{sinistro.id}}</td>
-            <td>RCA</td>
-            <td>Nome: {{sinistro.nome}}</td>
-            <td>ULS: {{sinistro.uls}}</td>
-            <td>Agenzia: {{sinistro.agenzia}}</td>
-            <td>Gest: {{sinistro.gest}}</td>
-            <td>Contraente: {{sinistro.contraente}}</td>
+            <td><b>{{sinistro.id}}</b></td>
+            <td>|</td>
+            <td><b>RCA</b></td>
+            <td>|</td>
+            <td>Liq. <b style="text-transform:uppercase;">{{sinistro.nome}}</b></td>
+            <td>uls( <b>0{{sinistro.uls}}</b> ) </td>
+            <td>|</td>
+            <td>Agenzia di <b>{{sinistro.agenzia}}</b></td>
+            <td>|</td>
+            <td>Gest: <b>0{{sinistro.gest}}</b></td>
+            <td>|</td>
+            <td>Contraente di polizza: <b style="text-transform:uppercase;">{{sinistro.contraente}}</b></td>
           </tr>
+          <br>
+          <div id="dettagliSinistro{{sinistro.id}}" class="flex-wrap removeVisibility" style="max-width: 500px;">
+            <div class="flex-none flex align-items-center justify-content-center">
+              <p><b>{{sinistro.contraente}}</b> contraente | Stato: <b>Chiusa senza seguito</b> | Danno: <i class="pi pi-car"></i> | PLP: <b>Non assegnata</b></p>
+            </div>
+            <div class="flex-none flex align-items-center justify-content-center">
+              <p>Data evento: <b>13/05/2022</b> | Data preve: <b>19/05/2022</b> | <b style="text-transform:uppercase;">Istruito</b> | EVIDENZE: Presenza R.D, Gestione RC, Contestato</p>
+            </div>
+            <div class="flex-none flex align-items-center justify-content-center">
+              <p>Motivo contestazione = <b>-</b> | Data invio lettera contestazione = <b>-</b></p>
+            </div>
+          </div>
+        </div>
+        <br>
         </ng-template>
+      
       </p-table>
   </ng-template>
+  <h5>Advanced</h5>
 </p-splitter>
