@@ -1,0 +1,51 @@
+<p-splitter [style]="{'height': '78vh'}" [panelSizes]="[10,90]" [minSizes]="[10,90]" layout="horizontal">
+  <ng-template pTemplate>
+  <div class="card">
+    <p-listbox [options]="opzioniListaSinistra" optionLabel="nome" [style]="{'width':'15em'}">
+    </p-listbox>
+    <br>
+    <div>
+      <div>Ultimi sinistri lavorati <br>
+      RCA - 160137475 9 minuti fa <br>
+      BARBAGIOVANNI ROSARIO <br>
+      </div>
+      <br>
+      <div>Ultimi sinistri lavorati <br>
+        RCA - 160137475 9 minuti fa <br>
+        BARBAGIOVANNI ROSARIO <br>
+        </div>
+    </div>
+    <br>
+    <div>
+      <p-avatar icon="pi pi-user" styleClass="mr-2" size="xlarge"></p-avatar>
+      Testliq.456
+    </div>
+    <div class="card">
+      Liquidatore 339
+      <i class="pi pi-sign-out"></i>
+      <i class="pi pi-sort-alt" style="opacity: 50%;"></i>
+    </div>
+  </div>
+  </ng-template>
+    
+  <ng-template pTemplate >
+    <p-table [value]="sinistri" [resizableColumns]="true" selectionMode="single"
+      responsiveLayout="scroll" [scrollable]="true">
+        <ng-template pTemplate="body" let-sinistro>
+          <p style="color: rgb(148, 0, 0);">Sinistro contestato rca</p>
+          <tr>
+            <td>
+              <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+            </td>
+            <td>Sinistro: {{sinistro.id}}</td>
+            <td>RCA</td>
+            <td>Nome: {{sinistro.nome}}</td>
+            <td>ULS: {{sinistro.uls}}</td>
+            <td>Agenzia: {{sinistro.agenzia}}</td>
+            <td>Gest: {{sinistro.gest}}</td>
+            <td>Contraente: {{sinistro.contraente}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+  </ng-template>
+</p-splitter>

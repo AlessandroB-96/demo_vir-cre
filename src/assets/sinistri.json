@@ -1,0 +1,31 @@
+{
+"sinistri": [
+    {
+      "id": 1,
+      "nome": "La torre Livia",
+      "uls": 33,
+      "agenzia": "Urbino",
+      "gest": 28,
+      "prod": 28,
+      "contraente": "Mazzoli Silvano"
+    },
+    {
+      "id": 2,
+      "nome": "La torre Livia",
+      "uls": 33,
+      "agenzia": "Urbino",
+      "gest": 28,
+      "prod": 28,
+      "contraente": "Mazzoli Silvano"
+    },
+    {
+      "id": 3,
+      "nome": "La torre Livia",
+      "uls": 33,
+      "agenzia": "Urbino",
+      "gest": 28,
+      "prod": 28,
+      "contraente": "Mazzoli Silvano"
+    }
+  ]
+}
