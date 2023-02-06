@@ -29,18 +29,18 @@ export class HomepageComponent {
       "id": 220183775,
       "nome": "La torre Livia",
       "uls": 33,
-      "agenzia": "Urbino",
-      "gest": 28,
-      "prod": 28,
+      "agenzia": "Fano",
+      "gest": 32,
+      "prod": 32,
       "contraente": "Fucili Elisabetta"
     },
     {
       "id": 220179496,
       "nome": "La torre Livia",
       "uls": 33,
-      "agenzia": "Urbino",
-      "gest": 28,
-      "prod": 28,
+      "agenzia": "Ascoli Piceno",
+      "gest": 1,
+      "prod": 1,
       "contraente": "Giordani Gianfranco"
     }
   ];
