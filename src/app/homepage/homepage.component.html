@@ -1,6 +1,10 @@
 <p-splitter [style]="{'height': '78vh'}" [panelSizes]="[10,90]" [minSizes]="[10,90]" layout="horizontal">
     
-  <ng-template pTemplate >
+  <div *ngFor="let sinistro of sinistri">
+    ciao
+  </div>
+
+  <!-- <ng-template pTemplate >
     <p-table id="table" [value]="sinistri" [resizableColumns]="true" selectionMode="single"
       responsiveLayout="scroll" [scrollable]="true" style="padding: 5px;" class="startingWidth">
       
@@ -50,5 +54,5 @@
       
       </p-table>
   </ng-template>
-  <h5>Advanced</h5>
+  <h5>Advanced</h5> -->
 </p-splitter>

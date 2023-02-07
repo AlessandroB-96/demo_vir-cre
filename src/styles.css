@@ -19,3 +19,7 @@
 .startingWidth{
     width:82vw;
 }
+
+.p-card .p-card-body {
+    background-color: rgb(213, 210, 210) !important;
+  }

@@ -20,6 +20,8 @@ import { SidebarModule } from 'primeng/sidebar';
 import { PanelModule } from 'primeng/panel';
 import { MenuModule } from 'primeng/menu';
 import { AccordionModule } from 'primeng/accordion';
+import { DettaglioComponent } from './dettaglio/dettaglio.component';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { AccordionModule } from 'primeng/accordion';
     AppComponent,
     HomepageComponent,
     TopbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    DettaglioComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { AccordionModule } from 'primeng/accordion';
     SidebarModule,
     PanelModule,
     MenuModule,
-    AccordionModule
+    AccordionModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

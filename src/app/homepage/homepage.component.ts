@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Sinistro } from '../entities/sinistro';
 import { SinistroService } from '../services/service';
+import * as jsonSinistri from '../../assets/sinistri.json';
 
 @Component({
   selector: 'app-homepage',
@@ -15,35 +16,7 @@ export class HomepageComponent {
   statoTabella: boolean = true;
   checked: boolean = false;
   iconaDettaglioSinistro: string = "pi-angle-down";
-  sinistri: Sinistro[] = [
-    {
-      "id": 220185043,
-      "nome": "La torre Livia",
-      "uls": 33,
-      "agenzia": "Urbino",
-      "gest": 28,
-      "prod": 28,
-      "contraente": "Mazzoli Silvano"
-    },
-    {
-      "id": 220183775,
-      "nome": "La torre Livia",
-      "uls": 33,
-      "agenzia": "Fano",
-      "gest": 32,
-      "prod": 32,
-      "contraente": "Fucili Elisabetta"
-    },
-    {
-      "id": 220179496,
-      "nome": "La torre Livia",
-      "uls": 33,
-      "agenzia": "Ascoli Piceno",
-      "gest": 1,
-      "prod": 1,
-      "contraente": "Giordani Gianfranco"
-    }
-  ];
+  sinistri: any[];
 
   constructor(private http:HttpClient, private service: SinistroService) {
     this.opzioniListaSinistra = [
@@ -55,6 +28,11 @@ export class HomepageComponent {
       {nome: 'Gestione card debitore', codice: '6'},
       {nome: 'Gestione', codice: '7'}
   ];
+    this.sinistri = jsonSinistri;
+    console.log(this.sinistri);
+    console.log(this.sinistri.at(0));
+    
+    
   }
 
 
