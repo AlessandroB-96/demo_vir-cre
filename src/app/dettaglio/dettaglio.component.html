@@ -1,4 +1,4 @@
-<p-splitter [style]="{'height': '78vh'}" [panelSizes]="[10,90]" [minSizes]="[10,90]" layout="horizontal">
+<p-splitter [style]="{'height': '100vh'}" [panelSizes]="[10,90]" [minSizes]="[10,90]" layout="horizontal">
     <ng-template pTemplate>
         <div style="width: 82vw;">
             <div class="grid" style="width: 100%;">
@@ -271,9 +271,219 @@
                             </div>
                         </div>
                     </div>
-                    <div id="spallaDestraBassa" class="col-fixed" style="background-color: rgb(213, 210, 210); width: 22%;">
-                        <p-listbox [options]="opzioniListaSinistra" optionLabel="nome">
-                        </p-listbox>
+                    <div id="spallaDestraBassa" class="col-fixed hoverListaPaginaDettaglio " style="height:722px;background-color: rgb(213, 210, 210); width: 22%;">
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Informazioni entità</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="background-color:white;margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <i class="pi pi-paperclip" style="margin-top: 20px;margin-left: 10px; margin-right: 20px;color:rgb(91, 226, 226)"></i>
+                            <p style="text-transform: uppercase;">Informazioni sinistro</p>
+                            <div style="height:60px; width: 10px; background-color: brown;margin-left: 35px;"></div>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Informazioni polizza</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Documenti</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Diario di trattazione</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Scadenzario</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Lettere / stampe</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Flussi</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;margin-left: 40px;">Banca dati sinsitri</p>
+                            <p class="flex align-content-center justify-content-center" style="color: brown;border:2px solid brown; border-radius: 50%; width:10%; margin-left: 25px;">4</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;">Comunicazioni</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;margin-left: 85px;">Antifrode</p>
+                            <p class="flex align-content-center justify-content-center" style="color: brown;border:2px solid brown; border-radius: 50%; width:10%; margin-left: 50px;">0</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="margin-left: -7px;width:277px;height: 60px; border:1px solid black;border-radius: 5px;">
+                            <p style="text-transform: uppercase;margin-left: 85px;">Messaggi</p>
+                            <p class="flex align-content-center justify-content-center" style="color: brown;border:2px solid brown; border-radius: 50%;width:10%; margin-left: 55px;">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 15px;width: 100%;height: 860px; background-color: white;border:1px solid black;border-radius: 5px;">
+                    <div style="background-color: rgb(213, 210, 210); width: 100%; height: 60px;" class="flex align-content-center justify-content-center hoverListaPaginaDettaglio">
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0; border-left: 0;width:139.77px">
+                            <p>Incarichi</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="background-color: white;border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <div style="background-color: brown;width:139.77px; height:10px;position:absolute"></div>
+                            <p>Validazione</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <p style="font-size: small; margin-top: 17px;">Preventivo e Riserva</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <p>Liquidazione</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <p>CARD</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <p>Contenzioso</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <p>Chiusura</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;width:139.77px">
+                            <p>Rivalse</p>
+                        </div>
+                        <div class="flex align-content-center justify-content-center" style="border:1px solid black;border-top: 0;border-bottom: 0;border-right: 0;width:139.77px">
+                            <p>Anagrafe Tributaria</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div style="margin-top: 20px; margin-left: 10px;" class="col-fixed">
+                            <div class="col" style="height:600px;background-color: rgb(213, 210, 210); width: 300px;">
+                                <div>
+                                    <p><b>Dati del contratto</b></p>
+                                    <p>Polizza coperta: <b>Si</b></p>
+                                    <p>Coassicurazione: <b>No</b></p>
+                                    <p>Riassicurazione: <b>No</b></p>
+                                    <p>Polizza con deroghe: <b>No</b></p>
+                                    <p>Polizza con clausola Jolly: <b>No</b></p>
+                                    <p>Polizza indicizzata: <b>No</b></p>
+                                </div>
+                                <p style="color: white;">____________________________________</p>
+                                <div>
+                                    <p><b>Dati del sinistro</b></p>
+                                    <p>Data accadimento: <b>16/12/2022</b></p>
+                                    <p>Incarichi su sinistro: <b>1 (0 in PLP)</b></p>
+                                    <p>Sinistro rilevante: <b>No</b></p>
+                                    <p></p>
+                                    <p>Data pervenimento denuncia: <b>19/12/2022</b></p>
+                                    <p>Sinistri collegati: <b>-</b></p>
+                                    <p>Data conferma sinistro: <b>21/12/2022,</b><b style="text-transform: uppercase;">La Torre Livia</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                        
+                        <div style="background-color: rgba(255, 244, 43, 0.84); height:60px; width:800px; margin-top: 30px; margin-right: 20px; border:1px solid rgba(255, 199, 33, 0.927)" class="col-fixed">
+                            <p style="color: brown;">Sinistro validato</p>
+                        </div>
+                        <p-fieldset legend="Questionario CAI" class="col-fixed">
+                            <div class=" grid flex align-content-left justify-content-between gap-2" style="height:330px;margin-left: 10px;margin-right: 10px;font-size: x-small;">
+                                <div col>
+                                    <div class="flex align-items-center justify-content-left" style="margin-bottom: 10px;">
+                                        <p>Veicoli coinvolti <b style="text-transform: uppercase;">Nostro e uno di controparte</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Dinamica inequivocabile:</p>
+                                        <p-selectButton [options]="opzioniDinamicaInequivocabile" [(ngModel)]="valoreDinamicaInequivocabile" optionLabel="label" optionValue="value"></p-selectButton>
+                                    </div>
+                                </div>
+                                <div col>
+                                    <div class="flex align-items-center justify-content-left" style="margin-bottom: 10px;">
+                                        <p>Collisione</p>
+                                        <p-selectButton class="col" [options]="opzioniCollisione" [(ngModel)]="valoreCollisione" optionLabel="label" optionValue="value"></p-selectButton>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>È presenta la data nella CAI? <b style="text-transform: uppercase;">-</b></p>
+                                        <p-selectButton class="col" [options]="opzioniDataCAI" [(ngModel)]="valoreDataCAI" optionLabel="label" optionValue="value"></p-selectButton>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left" style="margin-bottom: 10px;">
+                                        <p>Constatazione amichevole:</p>
+                                        <p-dropdown [options]="opzioniConstatazioneAmichevole" [(ngModel)]="sceltaConstatazioneAmichevole" optionLabel="name"></p-dropdown>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Sono indicate le targhe nella CAI? <b style="text-transform: uppercase;">-</b></p>
+                                        <p-selectButton class="col" [options]="opzioniTargaCAI" [(ngModel)]="valoreTargaCAI" optionLabel="label" optionValue="value"></p-selectButton>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left" style="margin-bottom: 10px;">
+                                        <p>Assicurato dichiara assenza danni al veicolo di contr...</p>
+                                        <p-selectButton class="col" [options]="opzioniTargaCAI" [(ngModel)]="valoreTargaCAI" optionLabel="label" optionValue="value"></p-selectButton>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Sono indicate le compagnie della CAI?</p>
+                                        <p-selectButton class="col" [options]="opzioniTargaCAI" [(ngModel)]="valoreTargaCAI" optionLabel="label" optionValue="value"></p-selectButton>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Descrizione dell'evento</p>
+                                    <textarea style="width:800px; height: 100px; max-width: 800px;" pInputTextarea></textarea>
+                                </div>
+                            </div>
+                        </p-fieldset>
+                        <p-fieldset legend="Veicoli coinvolti" class="col-fixed">
+                            <div class="grid">
+                                <div id="colonnaSInistra" class="col" style="width:200px;height:400px;background-color:rgb(91, 226, 226)">
+                                    <p><b style="font-size: large;">Contraente</b></p>
+                                    <div class="grid">
+                                        <div class="col-fixed" style="width:120px">
+                                            <p style="font-size: small;">Proprietario:</p>
+                                            <p style="font-size: small;">Contraente Itas:</p>
+                                            <p style="font-size: small;">Uls:</p>
+                                            <p style="font-size: small;">Recidivo:</p>
+                                            <p style="font-size: small;">Targa/Telaio</p>
+                                            <p style="font-size: small;">Marca/Modello</p>
+                                            <p style="font-size: small;">Tipo veicolo</p>
+                                            <p style="font-size: small;margin-top: 30px;">Compagnia</p>
+                                            <p style="font-size: small;margin-top: 30px;">Barèmes</p>
+                                        </div>
+                                        <div class="col">
+                                            <p style="font-size: small;"><b>Mazzoli Silvano</b></p>
+                                            <p style="font-size: small;"><b>Mazzoli Silvano</b></p>
+                                            <p style="font-size: small;"><b>033 -</b></p>
+                                            <p style="font-size: small;"><b>No</b></p>
+                                            <p style="font-size: small;">X6HFGF Tipo DEFINITIVA</p>
+                                            <p style="font-size: small;">APE PIAGGIO</p>
+                                            <p style="font-size: small;">FURGONCINO TRICICLO A PEDALI CON MOTORE AUSILIARIO</p>
+                                            <p style="font-size: small;">22 - ITAS -IST.TRENTINO ALTO-ADIGER PER ASSICURAZIONI (22)</p>
+                                            <p style="font-size: small;">13 - GIRAVA A SINISTRA</p>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div id="colonnaDestra" class="col" style="width:200px;height:400px;background-color:rgb(253, 255, 127)">
+                                    <p><b style="font-size: large;">Contraente di controparte</b></p>
+                                    <div class="grid">
+                                        <div class="col-fixed" style="width:120px">
+                                            <p style="font-size: small;">Proprietario:</p>
+                                            <p style="font-size: small;">Contraente Itas:</p>
+                                            <p style="font-size: small;">Uls:</p>
+                                            <p style="font-size: small;">Recidivo:</p>
+                                            <p style="font-size: small;">Targa/Telaio</p>
+                                            <p style="font-size: small;">Marca/Modello</p>
+                                            <p style="font-size: small;">Tipo veicolo</p>
+                                            <p style="font-size: small;margin-top: 30px;">Compagnia</p>
+                                            <p style="font-size: small;margin-top: 30px;">Barèmes</p>
+                                        </div>
+                                        <div class="col">
+                                            <p style="font-size: small;"><b>Barz Lucian</b></p>
+                                            <p style="font-size: small;"><b>Barz Lucian</b></p>
+                                            <p style="font-size: small;"><b>033 -</b></p>
+                                            <p style="font-size: small;"><b>No</b></p>
+                                            <p style="font-size: small;">DY507EN Tipo DEFINITIVA</p>
+                                            <p style="font-size: small;">AUDI / A3 2a SERIE</p>
+                                            <p style="font-size: small;">AUTOVETTURA</p>
+                                            <p style="font-size: small; margin-top: 30px;">440 - QUIZA ASSICURAZIONI S.P.A. (440)</p>
+                                            <p style="font-size: small;margin-top: 30px;">8 - TAMPONAVA PROCEDENDO NELLO STESSO SENSO O STESSA FILA</p>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </p-fieldset>
+                    </div>
                     </div>
                 </div>
             </div>

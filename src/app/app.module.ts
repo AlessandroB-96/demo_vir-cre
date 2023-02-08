@@ -24,7 +24,9 @@ import { DettaglioComponent } from './dettaglio/dettaglio.component';
 import { CardModule } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AccordionModule,
     CardModule,
     FieldsetModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SelectButtonModule,
+    DropdownModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
