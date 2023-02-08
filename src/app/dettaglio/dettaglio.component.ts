@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Sinistro } from '../entities/sinistro';
 
 @Component({
   selector: 'app-dettaglio',
@@ -21,6 +22,67 @@ export class DettaglioComponent {
   valoreAssenzaDanni: any;
   opzioniCompagnieCAI: any;
   valoreCompagnieCAI: any;
+  idSinistro: number=0;
+  sinistro: any[] = [
+    {
+      "id": 0,
+      "numeroSinistro": 220185043,
+      "ramo": "RCA",
+      "stato" : "Aperto",
+      "copertura" : "Si",
+      "gestione" : "RC (RC)",
+      "responsabilita" : "Ragione",
+      "confermato" : "Si",
+      "dataConfermato" : "21/12/2022",
+      "liquidatore": "La torre Livia",
+      "ulsLuogo" : "Genova",
+      "ulsNumero": 33,
+      "luogoAgenzia": "Urbino",
+      "numeroAgenzia": "A562",
+      "gest": 28,
+      "prod": 28,
+      "contraente": "Mazzoli Silvano",
+      "plp":"Non assegnata",
+      "conducenteVeicolo": "Mazzoli Samuele",
+      "proprietarioVeicolo" :"Mazzoli Silvano",
+      "infoSinistro" : "Contestato",
+      "tipoDenuncia" : "",
+      "denunciante" : "",
+      "ruoloDenunciante" : "",
+      "assicurato" : "",
+      "luogoDenuncia" : "",
+      "accadutoDenuncia" : "",
+      "eventoDenuncia" : "",
+      "dataDenunica" : "",
+      "dataPervenimentoDenuncia": "",
+      "dataProtocollazione" : "",
+      "datachiusura" : "",
+      "riattivazione" : "",
+      "rifIntermediario": "",
+      "rifAssicurato": "",
+      "idCAU": ""
+    },
+    {
+      "id": 220183775,
+      "nome": "La torre Livia",
+      "uls": 33,
+      "luogoAgenzia": "Fano",
+      "numeroAgenzia": "O161",
+      "gest": 32,
+      "prod": 32,
+      "contraente": "Fucili Elisabetta"
+    },
+    {
+      "id": 220179496,
+      "nome": "La torre Livia",
+      "uls": 33,
+      "luogoAgenzia": "Ascoli Piceno",
+      "numeroAgenzia": "A493",
+      "gest": 1,
+      "prod": 1,
+      "contraente": "Giordani Gianfranco"
+    }
+  ];
 
   constructor() {
     this.opzioniListaSinistra = [
@@ -59,7 +121,7 @@ export class DettaglioComponent {
   this.opzioniCompagnieCAI = [
     {label: 'Si', value: 'Si'},
     {label: 'No', value: 'No'}
-  ];
+  ];  
 }
 
 }
