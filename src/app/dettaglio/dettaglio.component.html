@@ -1,14 +1,14 @@
 <p-splitter [style]="{'height': '78vh'}" [panelSizes]="[10,90]" [minSizes]="[10,90]" layout="horizontal">
     <ng-template pTemplate>
         <div style="width: 82vw;">
-            <div class="grid">
-                <p-card class="justify-content-center text-center" header="SINISTRO 220185043 | Ramo RCA | Agenzia A562" style="width: 100%;"> 
+            <div class="grid" style="width: 100%;">
+                <p-card class="justify-content-center text-center" header="SINISTRO 220185043 | Ramo RCA | Agenzia A562" style="width: 100%;">
                     STATO <b>Aperto</b> | COPERTURA <b style="text-transform:uppercase;">Si</b> | GESTIONE <b style="text-transform:uppercase;">RC (RC)</b> | RESPONSABILITÀ <b>Ragione</b> | CONFERMATO <b style="text-transform:uppercase;">Si 21/12/2022 - La Torre Silvia</b>
                 </p-card>
-                <div class=" align-content-center" style="height: 170px;width: 100%; background-color: white;">
+                <div class=" align-content-center" style="height: 170px;width: 100% ; margin-bottom: 2px; background-color: white; border:1px solid rgb(91, 226, 226);border-radius: 5px;">
                     <div class="flex align-items-center justify-content-between" style="margin-left: 10px;margin-right: 10px;height: 100%;">
                         <i class="pi pi-angle-left" style="color:rgb(91, 226, 226);"></i>
-                        <div class="align-items-center justify-content-center" style="width:200px;height:100%;color:white;background-color: rgb(91, 226, 226);">
+                        <div id="topCardAzzurra" class="align-items-center justify-content-center" style="width:200px;height:100%;color:white;background-color: rgb(91, 226, 226); border:1px solid white;border-radius: 5px;">
                             <div class="flex align-items-center gap-2" style="margin-left: 5px;margin-right: 5px;">
                                 <i class="pi pi-stop-circle"></i>
                                 <p>Chiusa senza seguito</p>
@@ -22,6 +22,30 @@
                                 <p>X6HFGF</p>
                             </div>
                         </div>
+                        <div id="topCardBianca" class="align-items-center justify-content-center" style="width:200px;height:100%;color:rgb(91, 226, 226);background-color: white;border:1px solid rgb(91, 226, 226);border-radius: 5px;">
+                            <div class="flex align-items-center gap-2" style="margin-left: 5px;margin-right: 5px;color: rgb(177, 176, 176);">
+                                <i class="pi pi-stop-circle"></i>
+                                <p>Aperta</p>
+                            </div>
+                            <div style="margin-left: 5px;margin-right: 5px;">
+                                <p style="margin: 0,5;">CO | <b style="text-transform: uppercase;">Mazzoli Silvano</b></p>
+                                <p style="margin: 0;">Contraente non a bordo</p>
+                            </div>
+                            <div class="flex align-items-center justify-content-between" style="margin-left: 5px;margin-right: 5px;">
+                                <i class="pi pi-car"></i>
+                                <p>X6HFGF</p>
+                            </div>
+                        </div>
+                        <div id="topCardNuovaEntita" class="flex align-items-center justify-content-center" style="width:200px;height:100%;color:white;background-color: rgb(91, 226, 226); border:1px solid white;border-radius: 5px;">
+                            <div class="card justify-content-center" style="margin-left: 5px;margin-right: 5px;">
+                                <div class="field">
+                                    <p>Aggiungi nuova entità</p>
+                                </div>
+                                <div class="field flex align-items-center justify-content-center">
+                                    <i class="pi pi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
                         <i class="pi pi-angle-right" style="color:rgb(91, 226, 226);"></i>
                     </div>
                 </div>
@@ -32,6 +56,224 @@
                         <div class="flex align-items-center justify-content-center"><p>ULS: <b>Genova</b></p></div>
                         <p>|</p>
                         <p class="flex align-items-center justify-content-center">LIQUIDATORE: <b style="text-transform: uppercase;">La Torre Livia</b></p>
+                    </div>
+                </div>
+                <div class="card-container" style="width: 100%; background-color: white;">
+                    <div class="flex align-items-center justify-content-left" style="margin-left: 10px"><p><b style="text-transform: uppercase;">Soggetti collegati</b></p></div>
+                    <div class="flex-none flex align-items-center gap-4" style="margin-left: 10px;margin-right: 10px;">
+                        <div class="flex align-items-center justify-content-center"><p>Conducente del veicolo: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">Mazzoli Samuele</b></p></div>
+                        <p>|</p>
+                        <div class="flex align-items-center justify-content-center"><p>Proprietario del veicolo: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">Mazzoli Stefano</b></p></div>
+                    </div>
+                </div>
+                <div id="contenitoreEsternoBasso" class="grid card-container" style="width: 100%;height: 860px; background-color: white;border:1px solid black;border-radius: 5px;">
+                    <div style="width:78%">
+                        <div class="col flex align-items-center justify-content-left" style="margin-left: 10px">
+                            <p><b style="text-transform: uppercase;font-size: large;">Info sinistro</b></p>
+                            <p style="margin-left: 150px;">sinistro <b style="text-transform: uppercase;color:rgb(148, 0, 0)">contestato</b></p>
+                        </div>
+                        <div class="flex-none flex align-items-center gap-4" style="margin-left: 10px;margin-right: 10px;">
+                            <div class="flex align-items-center justify-content-center">
+                                <i class="pi pi-pencil" style="color:rgb(148, 0, 0); margin-right: 5px;"></i>
+                                <p style="text-transform: uppercase;color:rgb(148, 0, 0); font-size: medium;">Modifica</p>
+                            </div>
+                            <div class="flex align-items-center justify-content-center">
+                                <i class="pi pi-external-link" style="color:rgb(148, 0, 0); margin-right: 5px;"></i>
+                                <p style="text-transform: uppercase;color:rgb(148, 0, 0); font-size: medium;">Card debitore</p>
+                            </div>
+                            <div class="flex align-items-center justify-content-center">
+                                <i class="pi pi-pencil" style="color:rgb(148, 0, 0); margin-right: 5px;"></i>
+                                <p style="text-transform: uppercase;color:rgb(148, 0, 0); font-size: medium;">Eccesso</p>
+                            </div>
+                        </div>
+                        <p-fieldset legend="Denuncia">
+                            <div class="flex align-content-left justify-content-between gap-4" style="height:120px;margin-left: 10px;margin-right: 10px;font-size: x-small;">
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Tipo denuncia: <b style="text-transform: uppercase;">Denuncia assicurato</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Luogo: <b style="text-transform: uppercase;">61028 Sassovaro Auditore</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Data denuncia: <b style="text-transform: uppercase;">16/12/2022</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Riattivazione: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Denunciante: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">Silvano Mazzoli</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Accaduto il: <b style="text-transform: uppercase;">16/12/2022 - 18:30</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Data pervenimento denuncia: <b style="text-transform: uppercase;">19/12/2022</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Rif. intermediario: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Ruolo denunciante: <b style="text-transform: uppercase;">Contraente</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Evento: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Data protocollazione: <b style="text-transform: uppercase;">20/12/2022</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Rif. intermediario: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Assicurato: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">Silvano Mazzoli</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left" style="margin-top: 12px;">
+                                        <p>Data chiusura: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Identificativo CAU: <b style="text-transform: uppercase;">No</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </p-fieldset>
+                        <p-fieldset legend="Info ramo RCA">
+                            <div class="flex align-content-left justify-content-between gap-4" style="height:150px;margin-left: 10px;margin-right: 10px;font-size: x-small;">
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Controparte: <b style="text-transform: uppercase;">Quixa assicurazioni s.p.a.</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Responsabilità Ania: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Tipo CAi: <b style="text-transform: uppercase;">Cai due firme</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Dinamica inequivocabile CAi: <b style="text-transform: uppercase;">Si</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Presenza soggetti CTT: <b style="text-transform: uppercase;">No</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Codice responsabilità definita: <b style="text-transform: uppercase;"> </b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>F. Resp. inviato ad Ania: <b style="text-transform: uppercase;">No</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Targhe indicate nella CAI: <b style="text-transform: uppercase;">Si</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Collisione: <b style="text-transform: uppercase;">Si</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Sinistro rilevante: <b style="text-transform: uppercase;">No</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Responsabilità Ns Assicurato: <b style="text-transform: uppercase;">Nessuna resp.</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Allineamento responsabilità: <b style="text-transform: uppercase;">Latorrel</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Compagnie indicate nella CAI: <b style="text-transform: uppercase;">Si</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Numero di veicoli: <b style="text-transform: uppercase;">Due</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>SIC: <b style="text-transform: uppercase;">Ko - impresa debitrice non conferma c...</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Forzatura: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left" style="margin-top: 12px;">
+                                        <p>Data indicata in CAI: <b style="text-transform: uppercase;">Si</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Danni al veicolo di CTP: <b style="text-transform: uppercase;">Si</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Data Risp. SIC: <b style="text-transform: uppercase;">22/12/2022</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </p-fieldset>
+                        <p-fieldset legend="Altre info">
+                            <div class="flex align-content-left justify-content-between gap-4" style="height:60px;margin-left: 10px;margin-right: 10px;font-size: x-small;">
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Franchigie caricate: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">No</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Eccesso: <b style="text-transform: uppercase;">Nessuno</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Sinistri collegati: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">No</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Priorità: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Attività: <b style="text-transform: uppercase;">No</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Note sinistro: <b style="text-transform: uppercase;">-</b></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p>Codice sinistro: <b style="text-transform: uppercase;">103499325</b></p>
+                                    </div>
+                                    <div class="flex align-items-center justify-content-left">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </p-fieldset>
+                        <div class="flex-wrap" style="width:98%; margin-left: 10px; margin-top: 10px; height: 50px;background-color: rgb(213, 210, 210); border-radius: 5px;">
+                            <div class="flex align-content-center justify-content-center">
+                                <p><b style="color:rgb(148, 0, 0)">Valore sinistro (Incurred) €2,003,00 (NQ) €2,003,00 (100%)</b></p>
+                            </div>
+                            <div class="flex align-content-center justify-content-end">
+                                <i class="pi pi-angle-down" style="margin-top: -35px;margin-right: 10px;color:rgb(148, 0, 0)"></i>
+                            </div>
+                        </div>
+                        <div class="flex-wrap" style="width:98%; margin-left: 10px; margin-top: 10px; height: 50px;background-color: rgb(213, 210, 210); border-radius: 5px;">
+                            <div class="flex align-content-center justify-content-center">
+                                <p><b style="color:rgb(148, 0, 0)">Entità risarcite</b></p>
+                            </div>
+                            <div class="flex align-content-center justify-content-end">
+                                <i class="pi pi-angle-down" style="margin-top: -35px;margin-right: 10px;color:rgb(148, 0, 0)"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="spallaDestraBassa" class="col-fixed" style="background-color: rgb(213, 210, 210); width: 22%;">
+                        <p-listbox [options]="opzioniListaSinistra" optionLabel="nome">
+                        </p-listbox>
                     </div>
                 </div>
             </div>

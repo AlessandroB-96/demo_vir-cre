@@ -22,6 +22,8 @@ import { MenuModule } from 'primeng/menu';
 import { AccordionModule } from 'primeng/accordion';
 import { DettaglioComponent } from './dettaglio/dettaglio.component';
 import { CardModule } from 'primeng/card';
+import { FieldsetModule } from 'primeng/fieldset';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,7 +32,7 @@ import { CardModule } from 'primeng/card';
     HomepageComponent,
     TopbarComponent,
     SidebarComponent,
-    DettaglioComponent
+    DettaglioComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,9 @@ import { CardModule } from 'primeng/card';
     PanelModule,
     MenuModule,
     AccordionModule,
-    CardModule
+    CardModule,
+    FieldsetModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
