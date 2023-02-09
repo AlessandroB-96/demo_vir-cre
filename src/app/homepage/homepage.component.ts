@@ -4,6 +4,7 @@ import { MenuItem } from 'primeng/api';
 import { Sinistro } from '../entities/sinistro';
 import { SinistroService } from '../services/service';
 import { Output, EventEmitter } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-homepage',
@@ -17,6 +18,7 @@ export class HomepageComponent {
   checked: boolean = false;
   iconaDettaglioSinistro: string = "pi-angle-down";
   onSinistroSelezionato: any;
+  subscription: Subscription = new Subscription;
   sinistri: any[] = [
     {
       "id": 0,
@@ -67,9 +69,13 @@ export class HomepageComponent {
 
   emitSelectedSinistroId(id: any) {
     console.log(id)
-    SinistroService.idSInistro = id;
+    console.log(this.service.serviceId);
+    this.service.changeId(id);
   }
 
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
+  }
 
   mostraDettagliSinistro(id: number){
     if(document.getElementById('dettagliSinistro'+id)?.classList.contains("visibility")){

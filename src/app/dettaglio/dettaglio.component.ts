@@ -48,24 +48,25 @@ export class DettaglioComponent {
       "conducenteVeicolo": "Mazzoli Samuele",
       "proprietarioVeicolo" :"Mazzoli Silvano",
       "infoSinistro" : "Contestato",
-      "tipoDenuncia" : "",
-      "denunciante" : "",
-      "ruoloDenunciante" : "",
-      "assicurato" : "",
-      "luogoDenuncia" : "",
-      "accadutoDenuncia" : "",
-      "eventoDenuncia" : "",
-      "dataDenunica" : "",
-      "dataPervenimentoDenuncia": "",
-      "dataProtocollazione" : "",
-      "datachiusura" : "",
-      "riattivazione" : "",
-      "rifIntermediario": "",
-      "rifAssicurato": "",
-      "idCAU": ""
+      "tipoDenuncia" : "Denuncia Assicurato",
+      "denunciante" : "Silvano Mazzoli",
+      "ruoloDenunciante" : "Contraente",
+      "assicurato" : "Silvano Mazzoli",
+      "luogoDenuncia" : "61028 Sassocorvaro Auditore",
+      "accadutoDenuncia" : "16/12/2022 - 18:30",
+      "eventoDenuncia" : "-",
+      "dataDenuncia" : "16/12/2022",
+      "dataPervenimentoDenuncia": "19/12/2022",
+      "dataProtocollazione" : "20/12/2022",
+      "datachiusura" : "-",
+      "riattivazione" : "-",
+      "rifIntermediario": "-",
+      "rifAssicurato": "-",
+      "idCAU": "No"
     },
     {
-      "id": 220183775,
+      "id": 1,
+      "numeroSinistro": 1111111,
       "nome": "La torre Livia",
       "uls": 33,
       "luogoAgenzia": "Fano",
@@ -87,8 +88,8 @@ export class DettaglioComponent {
   ];
 
   constructor( private service: SinistroService) {
-    this.idSinistro = SinistroService.idSInistro;
-    console.log(this.idSinistro);
+    
+    console.log("idSinistro: "+this.idSinistro);
     
     this.opzioniListaSinistra = [
       {nome: 'HOME', codice: '1'},
@@ -127,6 +128,11 @@ export class DettaglioComponent {
     {label: 'Si', value: 'Si'},
     {label: 'No', value: 'No'}
   ];
+}
+
+ngOnInit(){
+  this.service.currentId.subscribe(id => this.idSinistro = id);
+  console.log(this.idSinistro);
 }
 
 }
