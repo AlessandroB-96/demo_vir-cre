@@ -166,9 +166,7 @@ export class DettaglioComponent {
   idDettaglio: any;
   
 
-  constructor(private route: ActivatedRoute, private service: SinistroService) {
-    
-    console.log("idSinistro: "+this.idSinistro);
+  constructor(private route: ActivatedRoute) {
     
     this.opzioniListaSinistra = [
       {nome: 'HOME', codice: '1'},
@@ -211,7 +209,6 @@ export class DettaglioComponent {
 
 ngOnInit(){
   this.idSinistro= this.route.snapshot.params['id'];
-  console.log(this.idSinistro);
   this.valoreCollisione = this.sinistro[this.idSinistro].collisione;
   this.valoreDinamicaInequivocabile = this.sinistro[this.idSinistro].dinamicaIneq;
   this.valoreDataCAI = this.sinistro[this.idSinistro].presenteDataCAI;
