@@ -2,8 +2,8 @@
     <ng-template pTemplate>
         <div id="dettaglio" class="startingWidth">
             <div class="grid" style="width: 100%;">
-                <p-card class="justify-content-center text-center" header="SINISTRO {{sinistro[idSinistro.valueOf()].id}} | Ramo {{sinistro[idSinistro].ramo}} | Agenzia {{sinistro[idSinistro].numeroAgenzia}}" style="width: 100%;">
-                    STATO <b>{{sinistro[idSinistro].numeroSinistro}}</b> | COPERTURA <b style="text-transform:uppercase;">{{sinistro[idSinistro].copertura}}</b> | GESTIONE <b style="text-transform:uppercase;">{{sinistro[idSinistro].gestione}}</b> | RESPONSABILITÀ <b>{{sinistro[idSinistro].responsabilita}}</b> | CONFERMATO <b style="text-transform:uppercase;">{{sinistro[idSinistro].confermato}} {{sinistro[idSinistro].dataConfermato}} - {{sinistro[idSinistro].liquidatore}}</b>
+                <p-card class="justify-content-center text-center" header="SINISTRO {{sinistro[idSinistro].numeroSinistro}} | Ramo {{sinistro[idSinistro].ramo}} | Agenzia {{sinistro[idSinistro].numeroAgenzia}}" style="width: 100%;">
+                    STATO <b>{{sinistro[idSinistro].stato}}</b> | COPERTURA <b style="text-transform:uppercase;">{{sinistro[idSinistro].copertura}}</b> | GESTIONE <b style="text-transform:uppercase;">{{sinistro[idSinistro].gestione}}</b> | RESPONSABILITÀ <b>{{sinistro[idSinistro].responsabilita}}</b> | CONFERMATO <b style="text-transform:uppercase;">{{sinistro[idSinistro].confermato}} {{sinistro[idSinistro].dataConfermato}} - {{sinistro[idSinistro].liquidatore}}</b>
                 </p-card>
                 <div class=" align-content-center" style="height: 170px;width: 100% ; margin-bottom: 2px; background-color: white; border:1px solid rgb(91, 226, 226);border-radius: 5px;">
                     <div class="flex align-items-center justify-content-between" style="margin-left: 10px;margin-right: 10px;height: 100%;">
@@ -14,8 +14,8 @@
                                 <p>Chiusa senza seguito</p>
                             </div>
                             <div style="margin-left: 5px;margin-right: 5px;">
-                                <p style="margin: 0,5;">CO | <b style="text-transform: uppercase;">Mazzoli Silvano</b></p>
-                                <p style="margin: 0;">Contraente non a bordo</p>
+                                <p style="margin: 0,5;">CO | <b style="text-transform: uppercase;">{{sinistro[idSinistro].contraente}}</b></p>
+                                <p style="margin: 0;">{{sinistro[idSinistro].aBordo}}</p>
                             </div>
                             <div class="flex align-items-center justify-content-between" style="margin-left: 5px;margin-right: 5px;">
                                 <i class="pi pi-car"></i>
@@ -61,9 +61,9 @@
                 <div class="card-container" style="width: 100%; background-color: white;">
                     <div class="flex align-items-center justify-content-left" style="margin-left: 10px"><p><b style="text-transform: uppercase;">Soggetti collegati</b></p></div>
                     <div class="flex-none flex align-items-center gap-4" style="margin-left: 10px;margin-right: 10px;">
-                        <div class="flex align-items-center justify-content-center"><p>Conducente del veicolo: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">Mazzoli Samuele</b></p></div>
+                        <div class="flex align-items-center justify-content-center"><p>Conducente del veicolo: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">{{sinistro[idSinistro].conducenteVeicolo}}</b></p></div>
                         <p>|</p>
-                        <div class="flex align-items-center justify-content-center"><p>Proprietario del veicolo: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">Mazzoli Stefano</b></p></div>
+                        <div class="flex align-items-center justify-content-center"><p>Proprietario del veicolo: <b style="text-transform: uppercase;color:rgb(148, 0, 0)">{{sinistro[idSinistro].proprietarioVeicolo}}</b></p></div>
                     </div>
                 </div>
                 <div id="contenitoreEsternoBasso" class="grid card-container" style="width: 100%;height: 860px; background-color: white;border:1px solid black;border-radius: 5px;">
@@ -442,9 +442,9 @@
                                             <p style="font-size: small;margin-top: 30px;">Barèmes</p>
                                         </div>
                                         <div class="col">
-                                            <p style="font-size: small;"><b>Mazzoli Silvano</b></p>
-                                            <p style="font-size: small;"><b>Mazzoli Silvano</b></p>
-                                            <p style="font-size: small;"><b>033 -</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].contraente}}</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].contraente}}</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].ulsNumero}} -</b></p>
                                             <p style="font-size: small;"><b>No</b></p>
                                             <p style="font-size: small;">X6HFGF Tipo DEFINITIVA</p>
                                             <p style="font-size: small;">APE PIAGGIO</p>

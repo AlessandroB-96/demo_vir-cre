@@ -10,7 +10,7 @@
             <p style="color: rgb(148, 0, 0);"><b style="text-transform:uppercase;">Sinistro contestato rca</b></p>
             <div class="flex align-items-center justify-content-end gap-2" style="margin-top: 15px;position: absolute;right: 0;">
               <a href=""><i class="pi pi-trash" style="color: rgb(148, 0, 0);"></i></a>
-              <a href="http://localhost:4200/dettaglio" (click)="emitSelectedSinistroId(sinistro.id)"><i class="pi pi-external-link" style="color: rgb(148, 0, 0);"></i></a>
+              <a href="{{url}}{{sinistro.id}}"><i class="pi pi-external-link" style="color: rgb(148, 0, 0);"></i></a>
               <button (click)="mostraDettagliSinistro(sinistro.id)" pButton pRipple style="border: 0cm;color: rgb(148, 0, 0); margin-right: 10px;" class="p-button-outlined p-button-secondary">
               <i id="icona{{sinistro.id}}" class="pi pi-angle-down"></i></button>
             </div>

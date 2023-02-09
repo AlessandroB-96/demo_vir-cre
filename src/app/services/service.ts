@@ -10,20 +10,17 @@ import * as sinistri from 'src/assets/sinistri.json';
 })
 
 export class SinistroService {
- data = sinistri
+    data = sinistri
 
- serviceId : number = 0;
+     serviceId : number = 0;
 
- private behaviourIdService = new BehaviorSubject(this.serviceId);
-currentId = this.behaviourIdService.asObservable();
+    private messageSource = new BehaviorSubject<string>('0');
+    currentMessage = this.messageSource.asObservable();
 
+    constructor (private http: HttpClient) {}
 
- constructor (private http: HttpClient) {}
-
-
-
- changeId(id: number) {
-    this.behaviourIdService.next(id);
+    changeMessage(id: string) {
+        this.messageSource.next(id);
     }
 
 }

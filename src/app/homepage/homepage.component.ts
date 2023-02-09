@@ -17,8 +17,9 @@ export class HomepageComponent {
   statoTabella: boolean = true;
   checked: boolean = false;
   iconaDettaglioSinistro: string = "pi-angle-down";
-  onSinistroSelezionato: any;
+  sinistroSelezionato: any;
   subscription: Subscription = new Subscription;
+  url: string = "http://localhost:4200/dettaglio/";
   sinistri: any[] = [
     {
       "id": 0,
@@ -49,13 +50,13 @@ export class HomepageComponent {
       "uls": 33,
       "luogoAgenzia": "Ascoli Piceno",
       "numeroAgenzia": "A493",
-      "gest": 1,
-      "prod": 1,
+      "gest": "01",
+      "prod": "01",
       "contraente": "Giordani Gianfranco"
     }
   ];
 
-  constructor(private service: SinistroService) {
+  constructor() {
     this.opzioniListaSinistra = [
       {nome: 'HOME', codice: '1'},
       {nome: 'Entità', codice: '2'},
@@ -65,12 +66,6 @@ export class HomepageComponent {
       {nome: 'Gestione card debitore', codice: '6'},
       {nome: 'Gestione', codice: '7'}
   ];
-  }
-
-  emitSelectedSinistroId(id: any) {
-    console.log(id)
-    console.log(this.service.serviceId);
-    this.service.changeId(id);
   }
 
   ngOnDestroy(){

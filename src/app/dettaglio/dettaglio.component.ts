@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Sinistro } from '../entities/sinistro';
 import { HomepageComponent } from '../homepage/homepage.component';
 import { SinistroService } from '../services/service';
@@ -43,6 +44,7 @@ export class DettaglioComponent {
       "numeroAgenzia": "A562",
       "gest": 28,
       "prod": 28,
+      "aBordo":"Contraente non a bordo",
       "contraente": "Mazzoli Silvano",
       "plp":"Non assegnata",
       "conducenteVeicolo": "Mazzoli Samuele",
@@ -62,32 +64,109 @@ export class DettaglioComponent {
       "riattivazione" : "-",
       "rifIntermediario": "-",
       "rifAssicurato": "-",
-      "idCAU": "No"
+      "idCAU": "No",
+      "collisione" : "Si",
+      "dinamicaIneq": "Si",
+      "presenteDataCAI":"Si",
+      "targheNellaCAI" : "Si",
+      "assicuratoDichAssenzaDanni" : "No",
+      "indicateCompagnieCAI": "Si"
     },
     {
       "id": 1,
-      "numeroSinistro": 1111111,
-      "nome": "La torre Livia",
-      "uls": 33,
+      "numeroSinistro": 220183775,
+      "ramo": "RCA",
+      "stato" : "Aperto",
+      "copertura" : "Si",
+      "gestione" : "RC (RC)",
+      "responsabilita" : "Ragione",
+      "confermato" : "Si",
+      "dataConfermato" : "21/12/2022",
+      "liquidatore": "La torre Livia",
+      "ulsLuogo" : "Genova",
+      "ulsNumero": 33,
       "luogoAgenzia": "Fano",
-      "numeroAgenzia": "O161",
+      "numeroAgenzia": "0161",
       "gest": 32,
       "prod": 32,
-      "contraente": "Fucili Elisabetta"
+      "aBordo":"Contraente a bordo",
+      "contraente": "Fucili Elisabetta",
+      "plp":"Non assegnata",
+      "conducenteVeicolo": "Fucili Elisabetta",
+      "proprietarioVeicolo" :"Fucili Elisabetta",
+      "infoSinistro" : "Contestato",
+      "tipoDenuncia" : "Denuncia Assicurato",
+      "denunciante" : "Fucili Elisabetta",
+      "ruoloDenunciante" : "Contraente",
+      "assicurato" : "Fucili Elisabetta",
+      "luogoDenuncia" : "61028 Sassocorvaro Auditore",
+      "accadutoDenuncia" : "16/12/2022 - 18:30",
+      "eventoDenuncia" : "-",
+      "dataDenuncia" : "16/12/2022",
+      "dataPervenimentoDenuncia": "19/12/2022",
+      "dataProtocollazione" : "20/12/2022",
+      "datachiusura" : "-",
+      "riattivazione" : "-",
+      "rifIntermediario": "-",
+      "rifAssicurato": "-",
+      "idCAU": "No",
+      "collisione" : "No",
+      "dinamicaIneq": "Si",
+      "presenteDataCAI":"Si",
+      "targheNellaCAI" : "No",
+      "assicuratoDichAssenzaDanni" : "Si",
+      "indicateCompagnieCAI": "Si"
     },
     {
-      "id": 220179496,
-      "nome": "La torre Livia",
-      "uls": 33,
+      "id": 2,
+      "numeroSinistro": 220179496,
+      "ramo": "RCA",
+      "stato" : "Aperto",
+      "copertura" : "Si",
+      "gestione" : "RC (RC)",
+      "responsabilita" : "Ragione",
+      "confermato" : "Si",
+      "dataConfermato" : "21/12/2022",
+      "liquidatore": "La torre Livia",
+      "ulsLuogo" : "Genova",
+      "ulsNumero": 33,
       "luogoAgenzia": "Ascoli Piceno",
       "numeroAgenzia": "A493",
-      "gest": 1,
-      "prod": 1,
-      "contraente": "Giordani Gianfranco"
+      "gest": "01",
+      "prod": "01",
+      "aBordo":"Contraente a bordo",
+      "contraente": "Giordani Gianfranco",
+      "plp":"Non assegnata",
+      "conducenteVeicolo": "Giordani Gianfranco",
+      "proprietarioVeicolo" :"Giordani Gianfranco",
+      "infoSinistro" : "Contestato",
+      "tipoDenuncia" : "Denuncia Assicurato",
+      "denunciante" : "Giordani Gianfranco",
+      "ruoloDenunciante" : "Contraente",
+      "assicurato" : "Giordani Gianfranco",
+      "luogoDenuncia" : "61028 Sassocorvaro Auditore",
+      "accadutoDenuncia" : "16/12/2022 - 18:30",
+      "eventoDenuncia" : "-",
+      "dataDenuncia" : "16/12/2022",
+      "dataPervenimentoDenuncia": "19/12/2022",
+      "dataProtocollazione" : "20/12/2022",
+      "datachiusura" : "-",
+      "riattivazione" : "-",
+      "rifIntermediario": "-",
+      "rifAssicurato": "-",
+      "idCAU": "No",
+      "collisione" : "Si",
+      "dinamicaIneq": "No",
+      "presenteDataCAI":"Si",
+      "targheNellaCAI" : "No",
+      "assicuratoDichAssenzaDanni" : "Si",
+      "indicateCompagnieCAI": "No"
     }
   ];
+  idDettaglio: any;
+  
 
-  constructor( private service: SinistroService) {
+  constructor(private route: ActivatedRoute, private service: SinistroService) {
     
     console.log("idSinistro: "+this.idSinistro);
     
@@ -131,8 +210,14 @@ export class DettaglioComponent {
 }
 
 ngOnInit(){
-  this.service.currentId.subscribe(id => this.idSinistro = id);
+  this.idSinistro= this.route.snapshot.params['id'];
   console.log(this.idSinistro);
+  this.valoreCollisione = this.sinistro[this.idSinistro].collisione;
+  this.valoreDinamicaInequivocabile = this.sinistro[this.idSinistro].dinamicaIneq;
+  this.valoreDataCAI = this.sinistro[this.idSinistro].presenteDataCAI;
+  this.valoreAssenzaDanni = this.sinistro[this.idSinistro].assicuratoDichAssenzaDanni;
+  this.valoreCompagnieCAI = this.sinistro[this.idSinistro].indicateCompagnieCAI;
+  this.valoreTargaCAI = this.sinistro[this.idSinistro].targheNellaCAI;
 }
 
 }
