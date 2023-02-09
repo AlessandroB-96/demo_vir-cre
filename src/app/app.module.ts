@@ -60,7 +60,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     DropdownModule,
     InputTextareaModule
   ],
-  providers: [],
+  providers: [HomepageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

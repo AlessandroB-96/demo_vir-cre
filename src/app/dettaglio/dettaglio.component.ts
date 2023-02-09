@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Sinistro } from '../entities/sinistro';
+import { HomepageComponent } from '../homepage/homepage.component';
+import { SinistroService } from '../services/service';
 
 @Component({
   selector: 'app-dettaglio',
@@ -84,7 +86,10 @@ export class DettaglioComponent {
     }
   ];
 
-  constructor() {
+  constructor( private service: SinistroService) {
+    this.idSinistro = SinistroService.idSInistro;
+    console.log(this.idSinistro);
+    
     this.opzioniListaSinistra = [
       {nome: 'HOME', codice: '1'},
       {nome: 'Entità', codice: '2'},
@@ -121,7 +126,7 @@ export class DettaglioComponent {
   this.opzioniCompagnieCAI = [
     {label: 'Si', value: 'Si'},
     {label: 'No', value: 'No'}
-  ];  
+  ];
 }
 
 }

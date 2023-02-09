@@ -12,6 +12,8 @@ import * as sinistri from 'src/assets/sinistri.json';
 export class SinistroService {
  data = sinistri
 
+ static idSInistro = 0;
+
  constructor (private http: HttpClient) {}
 
 

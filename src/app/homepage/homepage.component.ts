@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Sinistro } from '../entities/sinistro';
 import { SinistroService } from '../services/service';
-import * as jsonSinistri from '../../assets/sinistri.json';
 import { Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -17,7 +16,8 @@ export class HomepageComponent {
   statoTabella: boolean = true;
   checked: boolean = false;
   iconaDettaglioSinistro: string = "pi-angle-down";
-  @Output() sinistri: any[] = [
+  onSinistroSelezionato: any;
+  sinistri: any[] = [
     {
       "id": 0,
       "numeroSinistro": 220185043,
@@ -53,7 +53,7 @@ export class HomepageComponent {
     }
   ];
 
-  constructor(private http:HttpClient, private service: SinistroService) {
+  constructor(private service: SinistroService) {
     this.opzioniListaSinistra = [
       {nome: 'HOME', codice: '1'},
       {nome: 'Entità', codice: '2'},
@@ -63,6 +63,11 @@ export class HomepageComponent {
       {nome: 'Gestione card debitore', codice: '6'},
       {nome: 'Gestione', codice: '7'}
   ];
+  }
+
+  emitSelectedSinistroId(id: any) {
+    console.log(id)
+    SinistroService.idSInistro = id;
   }
 
 
