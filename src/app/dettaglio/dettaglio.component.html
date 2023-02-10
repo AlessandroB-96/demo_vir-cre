@@ -14,12 +14,12 @@
                                 <p>Chiusa senza seguito</p>
                             </div>
                             <div style="margin-left: 5px;margin-right: 5px;">
-                                <p style="margin: 0,5;">CO | <b style="text-transform: uppercase;">{{sinistro[idSinistro].contraente}}</b></p>
+                                <p style="margin: 0,5; margin-top: -2px;">CO | <b style="text-transform: uppercase; font-size: small; ">{{sinistro[idSinistro].contraente}}</b></p>
                                 <p style="margin: 0;">{{sinistro[idSinistro].aBordo}}</p>
                             </div>
                             <div class="flex align-items-center justify-content-between" style="margin-left: 5px;margin-right: 5px;">
                                 <i class="pi pi-car"></i>
-                                <p>X6HFGF</p>
+                                <p>{{sinistro[idSinistro].contraenteTarga}}</p>
                             </div>
                         </div>
                         <div id="topCardBianca" class="align-items-center justify-content-center" style="width:200px;height:100%;color:rgb(91, 226, 226);background-color: white;border:1px solid rgb(91, 226, 226);border-radius: 5px;">
@@ -28,12 +28,12 @@
                                 <p>Aperta</p>
                             </div>
                             <div style="margin-left: 5px;margin-right: 5px;">
-                                <p style="margin: 0,5;">CN | <b style="text-transform: uppercase;">Barz Lucian</b></p>
+                                <p style="margin: 0,5; margin-top: -2px;">CN | <b style="text-transform: uppercase; font-size: small;">{{sinistro[idSinistro].controControparte}}</b></p>
                                 <p style="margin: 0;font-size: small;">Contraente di controparte n...</p>
                             </div>
                             <div class="flex align-items-center justify-content-between" style="margin-left: 5px;margin-right: 5px;">
                                 <i class="pi pi-car"></i>
-                                <p>X6HFGF</p>
+                                <p>{{sinistro[idSinistro].controTarga}}</p>
                             </div>
                         </div>
                         <div id="topCardNuovaEntita" class="flex align-items-center justify-content-center" style="width:200px;height:100%;color:white;background-color: rgb(91, 226, 226); border:1px solid white;border-radius: 5px;">
@@ -113,7 +113,7 @@
                                         <p>Data pervenimento denuncia: <b style="text-transform: uppercase;">{{sinistro[idSinistro].dataPervenimentoDenuncia}}</b></p>
                                     </div>
                                     <div class="flex align-items-center justify-content-left">
-                                        <p>Rif. intermediario: <b style="text-transform: uppercase;">{{sinistro[idSinistro].dataPervenimentoDenuncia}}</b></p>
+                                        <p>Rif. intermediario: <b style="text-transform: uppercase;"> - </b></p>
                                     </div>
                                 </div>
                                 <div>
@@ -150,7 +150,7 @@
                             <div class="flex align-content-left justify-content-between gap-4" style="height:150px;margin-left: 10px;margin-right: 10px;font-size: x-small;">
                                 <div>
                                     <div class="flex align-items-center justify-content-left">
-                                        <p>Controparte: <b style="text-transform: uppercase;">Quixa assicurazioni s.p.a.</b></p>
+                                        <p>Controparte: <b style="text-transform: uppercase;">{{sinistro[idSinistro].controCompagnia}}</b></p>
                                     </div>
                                     <div class="flex align-items-center justify-content-left">
                                         <p>Responsabilità Ania: <b style="text-transform: uppercase;">-</b></p>
@@ -361,13 +361,13 @@
                                 <p style="color: white;">____________________________________</p>
                                 <div>
                                     <p><b>Dati del sinistro</b></p>
-                                    <p>Data accadimento: <b>16/12/2022</b></p>
+                                    <p>Data accadimento: <b>{{sinistro[idSinistro].accadutoDenuncia}}</b></p>
                                     <p>Incarichi su sinistro: <b>1 (0 in PLP)</b></p>
                                     <p>Sinistro rilevante: <b>No</b></p>
                                     <p></p>
-                                    <p>Data pervenimento denuncia: <b>19/12/2022</b></p>
+                                    <p>Data pervenimento denuncia: <b>{{sinistro[idSinistro].dataPervenimentoDenuncia}}</b></p>
                                     <p>Sinistri collegati: <b>-</b></p>
-                                    <p>Data conferma sinistro: <b>21/12/2022,</b><b style="text-transform: uppercase;">La Torre Livia</b></p>
+                                    <p>Data conferma sinistro: <b>{{sinistro[idSinistro].dataPervenimentoDenuncia}},</b><b style="text-transform: uppercase;">La Torre Livia</b></p>
                                 </div>
                             </div>
                         </div>
@@ -442,15 +442,15 @@
                                             <p style="font-size: small;margin-top: 30px;">Barèmes</p>
                                         </div>
                                         <div class="col">
-                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].contraente}}</b></p>
-                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].contraente}}</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].contraenteProprietario}}</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].contraenteControparte}}</b></p>
                                             <p style="font-size: small;"><b>{{sinistro[idSinistro].ulsNumero}} -</b></p>
                                             <p style="font-size: small;"><b>No</b></p>
-                                            <p style="font-size: small;">X6HFGF Tipo DEFINITIVA</p>
-                                            <p style="font-size: small;">APE PIAGGIO</p>
-                                            <p style="font-size: small;">FURGONCINO TRICICLO A PEDALI CON MOTORE AUSILIARIO</p>
-                                            <p style="font-size: small;">22 - ITAS -IST.TRENTINO ALTO-ADIGER PER ASSICURAZIONI (22)</p>
-                                            <p style="font-size: small;">13 - GIRAVA A SINISTRA</p>
+                                            <p style="font-size: small;">{{sinistro[idSinistro].contraenteTarga}}</p>
+                                            <p style="font-size: small;">{{sinistro[idSinistro].contraenteMarca}}</p>
+                                            <p style="font-size: small; text-transform: uppercase;">{{sinistro[idSinistro].contraenteVeicolo}}</p>
+                                            <p style="font-size: small; margin-top: 30px; text-transform: uppercase;">{{sinistro[idSinistro].contraenteCompagnia}}</p>
+                                            <p style="font-size: small; margin-top: 30px">13 - GIRAVA A SINISTRA</p>
                                         </div>
                                     </div>  
                                 </div>
@@ -469,14 +469,14 @@
                                             <p style="font-size: small;margin-top: 30px;">Barèmes</p>
                                         </div>
                                         <div class="col">
-                                            <p style="font-size: small;"><b>Barz Lucian</b></p>
-                                            <p style="font-size: small;"><b>Barz Lucian</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].controProprietario}}</b></p>
+                                            <p style="font-size: small;"><b>{{sinistro[idSinistro].controControparte}}</b></p>
                                             <p style="font-size: small;"><b>033 -</b></p>
                                             <p style="font-size: small;"><b>No</b></p>
-                                            <p style="font-size: small;">DY507EN Tipo DEFINITIVA</p>
-                                            <p style="font-size: small;">AUDI / A3 2a SERIE</p>
-                                            <p style="font-size: small;">AUTOVETTURA</p>
-                                            <p style="font-size: small; margin-top: 30px;">440 - QUIZA ASSICURAZIONI S.P.A. (440)</p>
+                                            <p style="font-size: small;">{{sinistro[idSinistro].controTarga}}</p>
+                                            <p style="font-size: small;">{{sinistro[idSinistro].controMarca}}</p>
+                                            <p style="font-size: small;text-transform: uppercase;">{{sinistro[idSinistro].controVeicolo}}</p>
+                                            <p style="font-size: small; margin-top: 30px; text-transform: uppercase;">{{sinistro[idSinistro].controCompagnia}}</p>
                                             <p style="font-size: small;margin-top: 30px;">8 - TAMPONAVA PROCEDENDO NELLO STESSO SENSO O STESSA FILA</p>
                                         </div>
                                     </div>  
